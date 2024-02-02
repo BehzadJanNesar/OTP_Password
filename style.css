@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .center-content {
+      @apply flex items-center justify-center;
+   }
+}
+
+.bg-gradiant1 {
+   background: linear-gradient(45deg, #9df0ff, #ffffff);
+}
+.bg-gradiant2 {
+   background: -webkit-linear-gradient(#0f2999, #328e9e);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.btn__hover {
+   background: linear-gradient(45deg, #328e9e, #9df0ff, #328e9e) !important;
+}
+.bg-btn {
+   background-color: #91a5ff;
+}
+.active {
+   background-color: #0f2999;
+}
+
+.show {
+   animation: show-alert .8s ease forwards;
+   display: flex;
+   opacity: 1;
+}
+
+@keyframes show-alert {
+   0% {
+      transform: translateX(100%);
+   }
+   40% {
+      transform: translateX(-10%);
+   }
+   80% {
+      transform: translateX(0%);
+   }
+   100% {
+      transform: translateX(-10px);
+   }
+}
+.hide {
+   animation: hide-alert .8s ease forwards;
+}
+/* .hide_style {
+   opacity: 0;
+   pointer-events: none;
+} */
+@keyframes hide-alert {
+   0% {
+      transform: translateX(-10px);
+   }
+   40% {
+      transform: translateX(0%);
+   }
+   80% {
+      transform: translateX(-10%);
+   }
+   100% {
+      transform: translateX(400px);
+   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
