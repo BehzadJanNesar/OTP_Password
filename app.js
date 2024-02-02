@@ -19,6 +19,7 @@ input.forEach((element, index1) => {
       ) {
          nextElement.removeAttribute("disabled");
          nextElement.focus();
+         element.setAttribute("disabled", true);
       }
 
       if (e.key === "Backspace") {
@@ -26,11 +27,12 @@ input.forEach((element, index1) => {
             if (index1 <= index2 && prevElement) {
                el.setAttribute("disabled", true);
                element.value = "";
+               prevElement.removeAttribute("disabled");
                prevElement.focus();
             }
          });
       }
-      if (!input[3].disabled && input[3].value !== "") {
+      if (!input[(0, 1, 2, 3)].disabled && input[(0, 1, 2, 3)].value !== "") {
          btn.classList.add("active");
          btn.removeAttribute("disabled");
          return;
